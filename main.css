@@ -6,6 +6,11 @@ body {
     padding: 0;
     background-color: #fff;
 }
+.inner{
+    max-width: 1280px;
+    margin: 0 auto;
+
+}
 
 /* 네비게이션 */
 header {
@@ -17,6 +22,7 @@ header {
 
 .logo img {
     width: 250px; /* 로고 크기 */
+    display: none;
 }
 
 nav ul {
@@ -41,10 +47,15 @@ main {
     height: 50vh; /* 화면의 70% 높이 */
     background: url('images/main-bg.jpg') no-repeat center center/cover;
 }
+.main-images > img{
+    width: 58%;
+}
 
 /* 인스타그램 위젯 */
-.instagram-section {
-    margin: 40px 0;
+
+.instagram-section > a{
+    font-family: 'KoPubWorld바탕체';
+
 }
 
 .instagram-button {
@@ -60,14 +71,60 @@ main {
   background-color: #a7a7a7;
 }
 
-/* 하단 이미지 */
-footer {
-    margin-top: 50px;
+
+/* 인스타그램 섹션 스타일 */
+.instagram-section {
+    text-align: center;
+    margin: 30px auto; /* 기존 50px → 30px로 줄여서 위로 올림 */
+    max-width: 1280px;
+    margin-top: -70px;
 }
 
-footer img {
-    width: 100%;
+
+/* 해시태그 버튼 */
+.instagram-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #ddd;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+
+/* 인스타그램 피드 컨테이너 */
+.instagram-feed {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    opacity: 0; /* 처음엔 투명하게 */
+    transform: translateY(20px); /* 아래에서 올라오게 */
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+/* 페이드인 효과 활성화 */
+.instagram-section.show .instagram-feed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* LightWidget 위젯 크기 */
+.lightwidget-widget {
+    width: 90%;
     max-width: 800px;
-    display: block;
-    margin: 0 auto;
+    height: 450px;
+    border: none;
+    overflow: hidden;
+}
+
+/* 인스타그램 위젯 안의 개별 사진 효과 */
+.lightwidget-widget iframe {
+    transition: opacity 0.5s ease-in-out; /* 부드러운 페이드인 효과 */
+}
+
+/* 마우스를 올렸을 때 페이드인 */
+.lightwidget-widget:hover iframe {
+    opacity: 0.7; /* 사진이 약간 밝아지는 효과 */
 }

@@ -9,7 +9,7 @@
 <body>
     <!-- 상단 네비게이션 -->
     <header>
-        <div class="logo">
+        <div class="logo inner">
             <img src="images/logo.jpg" alt="FLOWEROWOON 로고">
         </div>
         
@@ -17,23 +17,41 @@
 
     <!-- 메인 섹션 (배경 이미지) -->
     <main>
-<div class="main-images">
+<div class="main-images inner">
     <img src="images/banner.jpg" alt="">
 </div>
         
     </main>
 
-    <!-- 인스타그램 위젯 -->
-    <section class="instagram-section">
-        <h3>INSTAGRAM</h3>
-        <a href="https://www.instagram.com/flowerowoon/" target="_blank" class="instagram-button">
-            #FLOWEROWOON
-        </a>
-    </section>
+   <!-- 인스타그램 위젯 -->
+<!-- 인스타그램 위젯 -->
+<section class="instagram-section" id="instagramSection" inner>
+    <h3>INSTAGRAM</h3>
+
+    <!-- 해시태그 버튼 -->
+    <a href="https://www.instagram.com/flower.rowoon/" target="_blank" class="instagram-button">
+        #FLOWEROWOON
+    </a>
+
+    <!-- LightWidget WIDGET (인스타그램 피드) -->
+    <div class="instagram-feed">
+<!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/c34e0363051854deb7653cccfd7eadde.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+    <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+</section>
+
+<!-- 페이드인 효과 스크립트 -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const instagramSection = document.getElementById("instagramSection");
+        setTimeout(() => {
+            instagramSection.classList.add("show");
+        }, 500); // 0.5초 후 페이드인 시작
+    });
+</script>
+
+
 
     <!-- 하단 이미지 -->
-    <footer>
-        <img src="images/bottom-image.jpg" alt="FLOWEROWOON 하단 이미지">
-    </footer>
+   
 </body>
 </html>
