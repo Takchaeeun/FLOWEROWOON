@@ -7,9 +7,9 @@ body {
     background-color: #fff;
 }
 .inner{
-    max-width: 1280px;
+    max-width: 1180px;
     margin: 0 auto;
-
+    padding: 0 20px;
 }
 
 /* 네비게이션 */
@@ -25,50 +25,59 @@ header {
     display: none;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
 
-nav ul li {
-    display: inline;
-    margin-left: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-}
 
 /* 메인 배경 이미지 */
 main {
     width: 100%;
-    height: 50vh; /* 화면의 70% 높이 */
-    background: url('images/main-bg.jpg') no-repeat center center/cover;
+    height: 100vh; /* 화면의 70% 높이 */
+    align-items: center;
+    display: flex;
 }
-.main-images > img{
-    width: 58%;
+.main-inner
+{
+width: 100%;
+
+}
+.flowerlowoon{
+    font-family: 'KoPubWorld바탕체';
+    font-size:100px;
+}
+.main-inner > p{
+    font-size: 
+}
+.main-inner > p{
+    font-size: 30px;
+}
+.main-last > span{
+    font-size: 50px;
+    font-weight: 600;
+}
+.main-last2{
+    
 }
 
 /* 인스타그램 위젯 */
 
-.instagram-section > a{
-    font-family: 'KoPubWorld바탕체';
 
-}
 
 .instagram-button {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #ccc;
+    padding: 10px;
+   
     color: black;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 20px;
+   
 }
-.instagram-button:hover {
-  background-color: #a7a7a7;
+
+
+/* ✅ 인스타그램 위젯 크기 키우기 */
+.instagram-feed {
+    width: 100%;
+    height: 800px; /* 기존 450px → 600px로 키움 */
+    border: none;
+ 
 }
 
 
@@ -79,19 +88,22 @@ main {
     max-width: 1280px;
     margin-top: -70px;
 }
-
+.instagram-section > a{
+    font-size: 15px ;
+}
+.instagram-section > h3{
+    font-size: 30px;
+}
 
 /* 해시태그 버튼 */
 .instagram-button {
     display: inline-block;
     padding: 12px 25px;
-    background-color: #ddd;
-    color: black;
+  
     text-decoration: none;
     font-weight: bold;
-    font-size: 18px;
-    border-radius: 25px;
-    margin-bottom: 20px;
+ 
+  
 }
 
 /* 인스타그램 피드 컨테이너 */
@@ -127,4 +139,78 @@ main {
 /* 마우스를 올렸을 때 페이드인 */
 .lightwidget-widget:hover iframe {
     opacity: 0.7; /* 사진이 약간 밝아지는 효과 */
+}
+/* 반응형 스타일 */
+@media screen and (max-width: 1024px) {
+    .flowerlowoon {
+        font-size: 80px;
+    }
+
+    .main-inner > p {
+        font-size: 25px;
+    }
+
+    .main-last > span {
+        font-size: 40px;
+    }
+
+    .lightwidget-widget {
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .flowerlowoon {
+        font-size: 60px;
+    }
+
+    .main-inner > p {
+        font-size: 20px;
+    }
+
+    .main-last > span {
+        font-size: 30px;
+    }
+
+    .instagram-section {
+        margin: 30px auto;
+    }
+
+    .instagram-button {
+        font-size: 16px;
+        padding: 8px 20px;
+    }
+
+    .lightwidget-widget {
+        height: 400px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .flowerlowoon {
+        font-size: 45px;
+    }
+
+    .main-inner > p {
+        font-size: 18px;
+    }
+
+    .main-last > span {
+        font-size: 25px;
+    }
+
+    .instagram-section {
+        margin: 20px auto;
+    }
+
+    .instagram-button {
+        font-size: 14px;
+        padding: 6px 15px;
+    }
+
+    .lightwidget-widget {
+        height: 350px;
+        width: 100%;
+    }
 }
