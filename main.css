@@ -4,7 +4,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    background-color: #fff;
+    background-color: #fff;    overflow-y: scroll; /* 세로 스크롤 활성화 */
 }
 .inner{
     max-width: 1180px;
@@ -12,14 +12,13 @@ body {
     padding: 0 20px;
 }
 
-/* 네비게이션 */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-}
 
+/* 네비게이션 */
+
+.logo{
+    width: 100%;
+    margin-bottom: -3%;
+}
 .logo img {
     width: 250px; /* 로고 크기 */
     display: none;
@@ -27,34 +26,59 @@ header {
 
 
 
-/* 메인 배경 이미지 */
-main {
-    width: 100%;
-    height: 100vh; /* 화면의 70% 높이 */
-    align-items: center;
+.gallery {
     display: flex;
+    justify-content: center;
+    padding: 27px 20px;
 }
-.main-inner
-{
-width: 100%;
+
+.gallery-images {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    max-width: 1300px;
+    width: 100%;
+}
+
+.gallery-images img {
+    width: 100%;
+    height: auto;
+ 
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-images img:hover {
+    transform: scale(1.05);
+}
+
+/* 감성적인 텍스트 */
+.text-section {
+    width: 100%;
+    margin: 50px auto;
+    max-width: 1180px;
+}
+
+.text-section p {
+    font-size: 23px;
+    color: #666;
+    margin-bottom: 0px;
 
 }
-.flowerlowoon{
-    font-family: 'KoPubWorld바탕체';
-    font-size:100px;
-}
-.main-inner > p{
-    font-size: 
-}
-.main-inner > p{
+.text-section p > span{
     font-size: 30px;
-}
-.main-last > span{
-    font-size: 50px;
     font-weight: 600;
 }
-.main-last2{
-    
+
+.logo h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 20px;
+    width: 100%;
+    font-size: 6vw;
+    font-weight: 300;
+    color: #e79680;
+    font-family: 'Cormorant Garamond';
 }
 
 /* 인스타그램 위젯 */
@@ -86,7 +110,7 @@ width: 100%;
     text-align: center;
     margin: 30px auto; /* 기존 50px → 30px로 줄여서 위로 올림 */
     max-width: 1280px;
-    margin-top: -70px;
+    margin-top: 50px;
 }
 .instagram-section > a{
     font-size: 15px ;
