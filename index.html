@@ -5,23 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FLOWEROWOON</title>
     <link rel="stylesheet" href="main.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
-    <!-- 상단 네비게이션 -->
 
+    <!-- 감성적인 타이포그래피 -->
+    <div class="logo" data-aos="fade-up" data-aos-duration="2000">
+        <h1>Flowerowoon</h1>
+    </div>
 
     <!-- 메인 섹션 (배경 이미지) -->
     <main>
-        
-        </section>
-    
-        <!-- 감성적인 타이포그래피 -->
-        <div class="logo">
-            <h1>Flowerowoon</h1>
-        </div>
         <section class="gallery">
-            <div class="gallery-images">
+            <div class="gallery-images" data-aos="zoom-in-up" data-aos-duration="2500">
                 <img src="images/flower-1.jpg" alt="이미지1">
                 <img src="images/flower-2.jpg" alt="이미지2">
                 <img src="images/flower-3.jpg" alt="이미지3">
@@ -29,44 +25,55 @@
                 <img src="images/flower-5.jpg" alt="이미지5">
                 <img src="images/flower-6.jpg" alt="이미지6">
             </div>
+        </section>
     </main>
-    <section class="text-section">
-        
+
+    <!-- 텍스트 섹션 -->
+    <section class="text-section" data-aos="fade-up" data-aos-duration="2000">
         <p>2025에는 새로운 미션으로 인해 오프라인 매장 운영을 잠시 중단합니다.</p>
         <p>인스타그램과 홈페이지로 소식을 전하겠습니다.</p>
         <p>새로운 오프라인 매장은 2026년 서울에서 뵙겠습니다.</p>
-        <p>Coming<span>2026.</span>Opening</p>
+        <p>Coming <span>2026.</span> Opening</p>
         <p>www.flowerowoon.com</p>
-        
     </section>
-   <!-- 인스타그램 위젯 -->
-<!-- 인스타그램 위젯 -->
-<section class="instagram-section" id="instagramSection" inner>
-    <h3>INSTAGRAM</h3>
 
-    <!-- 해시태그 버튼 -->
-    <a href="https://www.instagram.com/flower.rowoon/" target="_blank" class="instagram-button">
-        @FLOWEROWOON
-    </a>
+    <!-- 인스타그램 위젯 -->
+    <section class="instagram-section" id="instagramSection" data-aos="fade-up" data-aos-duration="2000">
+        <h3>INSTAGRAM</h3>
 
-    <!-- LightWidget WIDGET (인스타그램 피드) -->
-    <div class="instagram-feed">
-<!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/a1ed06f04aaf54678d500a53be109e23.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>    <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
-</section>
+        <!-- 해시태그 버튼 -->
+        <a href="https://www.instagram.com/flower.rowoon/" target="_blank" class="instagram-button" data-aos="fade-up" data-aos-duration="2000">
+            @FLOWEROWOON
+        </a>
 
-<!-- 페이드인 효과 스크립트 -->
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const instagramSection = document.getElementById("instagramSection");
-        setTimeout(() => {
-            instagramSection.classList.add("show");
-        }, 500); // 0.5초 후 페이드인 시작
-    });
-</script>
+        <!-- LightWidget WIDGET (인스타그램 피드) -->
+        <div class="instagram-feed">
+            <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+            <iframe src="//lightwidget.com/widgets/a1ed06f04aaf54678d500a53be109e23.html"
+                scrolling="no" allowtransparency="true"
+                class="lightwidget-widget"
+                style="width:100%;border:0;overflow:hidden;">
+            </iframe>
+            <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+        </div>
+    </section>
 
+    <!-- AOS 및 추가적인 스크립트 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            AOS.init({
+                duration: 2000, // 전체 애니메이션 속도 (기본 2초)
+                once: true // 한 번만 실행
+            });
 
+            // 인스타그램 위젯 페이드인 효과
+            const instagramSection = document.getElementById("instagramSection");
+            setTimeout(() => {
+                instagramSection.classList.add("show");
+            }, 500); // 0.5초 후 페이드인 시작
+        });
+    </script>
 
-    <!-- 하단 이미지 -->
-   
 </body>
 </html>
